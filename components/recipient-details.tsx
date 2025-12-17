@@ -64,7 +64,7 @@ export function RecipientDetails({
   );
 
   return (
-    <Card className="w-full max-w-2xl min-h-90 sm:min-h-190  p-4 sm:p-6 md:p-8 shadow-xl rounded-[30px]">
+    <Card className=" flex flex-col justify-between w-full max-w-2xl min-h-90 sm:min-h-190  p-4 sm:p-6 md:p-8 shadow-xl rounded-[30px]">
       <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
         <Button
           variant="ghost"
@@ -79,7 +79,7 @@ export function RecipientDetails({
         </h1>
       </div>
 
-      <div className="space-y-4 sm:space-y-6">
+      <div className="space-y-4 sm:space-y-6 flex-1">
         <div className="space-y-2">
           <Label htmlFor="bank" className="text-sm sm:text-base font-semibold">
             Bank
@@ -122,28 +122,25 @@ export function RecipientDetails({
           />
         </div>
 
-        {accountName && (
-          <div className="space-y-2">
-            <Label className="text-sm sm:text-base font-semibold">
-              Account name
-            </Label>
-            <div className="h-12 sm:h-14 rounded-2xl bg-muted flex items-center px-4">
-              <span className="text-sm sm:text-base font-medium">
-                {accountName}
-              </span>
-            </div>
+        <div className="space-y-2">
+          <Label className="text-sm sm:text-base font-semibold">
+            Account name
+          </Label>
+          <div className="h-12 sm:h-14 rounded-full bg-muted flex items-center px-4  ">
+            <span className="text-sm sm:text-base font-medium ">
+              {accountName}
+            </span>
           </div>
-        )}
-
-        <Button
-          onClick={handleNext}
-          className="w-full h-12 sm:h-14 text-base sm:text-lg font-medium mt-6 sm:mt-8"
-          size="lg"
-          disabled={!bank || !accountNumber || !accountName}
-        >
-          Next
-        </Button>
+        </div>
       </div>
+      <Button
+        onClick={handleNext}
+        className="w-full h-12 sm:h-14 text-base sm:text-lg font-medium mt-6 sm:mt-8 rounded-full"
+        size="lg"
+        disabled={!bank || !accountNumber || !accountName}
+      >
+        Next
+      </Button>
     </Card>
   );
 }

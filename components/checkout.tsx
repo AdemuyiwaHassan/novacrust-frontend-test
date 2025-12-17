@@ -117,7 +117,7 @@ const CheckOut = () => {
     <Card className="flex flex-col justify-between w-full max-w-2xl min-h-90 sm:min-h-190 sm:p-6 p-8 shadow-xl rounded-[30px]">
       <CheckoutTabs mode={mode} onModeChange={setMode} />
       {mode === "crypto-to-cash" ? (
-        <div className="flex flex-col justify-between  ">
+        <div className="flex flex-col justify-between  flex-1">
           <div className="space-y-4 sm:space-y-6  md:space-y-6">
             <CurrencyInput
               label="You pay"
@@ -173,7 +173,7 @@ const CheckOut = () => {
           </Button> */}
         </div>
       ) : (
-        <div className="flex flex-col mt-6 md:mt-8 space-y-4 md:space-y-6 justify-center items-center p-8">
+        <div className="flex flex-col mt-6 md:mt-8 space-y-4 md:space-y-6 justify-center items-center p-8 flex-1">
           <h1 className="font-medium text-3xl text-primary self-center">
             Coming Soon!
           </h1>
