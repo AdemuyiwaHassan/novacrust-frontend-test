@@ -87,9 +87,9 @@ export function RecipientDetails({
           <Select value={bank} onValueChange={setBank}>
             <SelectTrigger
               id="bank"
-              className="h-15 sm:h-14 rounded-2xl border-2 text-sm sm:text-base bg-background w-full"
+              className="h-14 sm:h-16 border-2 text-sm sm:text-base bg-background w-full px-4 py-6 rounded-full"
             >
-              <SelectValue placeholder="Select an option" className="h-15 " />
+              <SelectValue placeholder="Select an option" />
             </SelectTrigger>
             <SelectContent>
               <div className="max-h-60 overflow-auto">

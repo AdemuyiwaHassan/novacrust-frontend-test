@@ -39,7 +39,7 @@ export function WalletSelector({
     <div className="space-y-3 w-full">
       <Label className="text-base text-foreground font-medium">{label}</Label>
       <Select value={value} onValueChange={onChange}>
-        <SelectTrigger className="h-12 p-5 text-base rounded-[1.5rem] border-border bg-card w-full text-primary font-normal">
+        <SelectTrigger className="h-12 p-6 text-base rounded-[1.5rem] border-border bg-card w-full text-primary font-normal">
           <SelectValue
             placeholder={placeholder}
             className="text-primary text-base font-normal"
